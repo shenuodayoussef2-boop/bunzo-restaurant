@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUNZO - بونز</title>
+  <!-- خط كايو -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Header -->
+  <header class="main-header">
+    <div class="container">
+      
+      <!-- القسم الأيسر: أيقونة السلة ونصوص الطلب -->
+      <div class="header-left">
+        <a href="#" class="cart-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </a>
+        <div class="order-text">
+          <span class="order-label">نوع الطلب</span>
+          <span class="order-type">حدد نوع الطلب</span>
+        </div>
+      </div>
+
+
+      <!-- القسم الأيمن: قائمة الهمبرغر -->
+      <div class="header-right">
+        <a href="#" class="menu-toggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+  <!-- End Header -->
+  <!-- Start Hero Section -->
+   <section class="hero-section">
+     <div class="hero-container">
+      <div class="hero-content">
+       <h1>اهلا بك في<span>BUNZO</span></h1>
+       <p>استمتع بألذ وأشهى البرجر والمأكولات الطازجة المصنوعة خصيصاً لإرضاء ذوقك.</p>
+       <a href="#" class="hero-btn">اطلب الان</a>
+      </div>
+     </div>
+   </section>
+  <!-- End Hero Section -->
+<!-- Start Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="section-title">قائمتنا المميزة</h2>
+      
+      <div class="menu-grid">
+        <!-- الوجبة 1 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="برجر لحم">
+          <div class="menu-info">
+            <h3>بيج بونز برجر</h3>
+            <p>لحم بيجوس طازج مع الجبن الذائب والصوص الخاص.</p>
+            <div class="price-row">
+              <span class="price">120 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 2 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="برجر دجاج">
+          <div class="menu-info">
+            <h3>كريسبي تشيكن</h3>
+            <p>صدر دجاج مقرمش مع الخس الطازج وصوص المايونيز الحار.</p>
+            <div class="price-row">
+              <span class="price">100 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 3 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80" alt="وجبة أطفال">
+          <div class="menu-info">
+            <h3>وجبة الأطفال</h3>
+            <p>برجر ميني لحم أو دجاج مع البطاطس المقلية والعصير.</p>
+            <div class="price-row">
+              <span class="price">75 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 4 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=500&q=80" alt="دبل تشيز برجر">
+          <div class="menu-info">
+            <h3>دبل تشيز برجر</h3>
+            <p>قطعتين لحم رقيقة مع طبقات مضاعفة من الجبن الأمريكي.</p>
+            <div class="price-row">
+              <span class="price">150 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 5 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=500&q=80" alt="ماشروم برجر">
+          <div class="menu-info">
+            <h3>ماشروم سويس برجر</h3>
+            <p>لحم طازج مع صوص الماشروم الكريمي وجبن السويسري.</p>
+            <div class="price-row">
+              <span class="price">135 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 6 -->
+        <div class="menu-card">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm6-UXB1OTLTYLuZZh7NlfQd-MobO8Rq7Z-tLZlpRkTMKkIET76G3Qn4MhQjBNTyDMubxsuTHyqfdZwhfCprQecZtp1icaALLfQl--R5M4Hi26BBZB0YpGilImPOQ8S8rMkqSFP3II0EtzR=w138-h138-n-k-no" alt="تشيكن سبايسي">
+          <div class="menu-info">
+            <h3>فلاينج سبايسي تشيكن</h3>
+            <p>دجاج مقرمش مغطى بصوص البافلو الحار وجلابينو.</p>
+            <div class="price-row">
+              <span class="price">110 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 7 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80" alt="بطاطس محمرة">
+          <div class="menu-info">
+            <h3>بطاطس تشيزي</h3>
+            <p>بطاطس مقرمشة مغطاة بصوص الجبن الساخن والبيكن.</p>
+            <div class="price-row">
+              <span class="price">45 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 8 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=500&q=80" alt="حلقات بصل">
+          <div class="menu-info">
+            <h3>حلقات البصل المقرمشة</h3>
+            <p>حلقات بصل ذهبية مقرمشة تُقدم مع الصوص الخاص.</p>
+            <div class="price-row">
+              <span class="price">40 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 9 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80" alt="ميلك شيك">
+          <div class="menu-info">
+            <h3>ميلك شيك شوكولاتة</h3>
+            <p>مشروب مثلج غني بالشوكولاتة والآيس كريم الفاخر.</p>
+            <div class="price-row">
+              <span class="price">60 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- الوجبة 10 -->
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=80" alt="مشروبات غازية">
+          <div class="menu-info">
+            <h3>مشروبات غازية</h3>
+            <p>مختلف أنواع المشروبات الغازية الباردة.</p>
+            <div class="price-row">
+              <span class="price">25 ج.م</span>
+              <a href="#" class="add-to-cart">أضف للسلة</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Menu Section -->
+  <!-- Start Offers Section -->
+   <section class="offers-section" id="العروض">
+    <div class="container">
+    <h2 class="section-title">عروض بونز الخاصة</h2>
+    <div class="offers-grid">
+       <div class="offer-card">
+        <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?auto=format&fit=crop&w=500&q=80" alt="">
+        <div class="offer-info">
+        <h3>عرض العيلة</h3>
+         <p>4 سندوتشات برجر + بطاطس لارج + لتر كولا بـ 350 ج.م فقط!</p>
+         <a href="#" class="hero-btn">اطلب العرض</a>
+       </div>
+       </div>
+       <div class="offer-card">
+         <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80" alt="">
+         <div class="offer-info">
+          <h3>عرض الدبل</h3>
+          <p>اشتري سندوتش دبل تشيز برجر وخد التاني بـ نص الثمن!</p>
+           <a href="#" class="hero-btn">اطلب العرض</a>
+         </div>
+       </div>
+    </div>
+    </div>
+   </section>
+  <!-- End Offers Section -->
+   <!-- Start About Section (من نحن) -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="section-title">من نحن</h2>
+        <p>مطعم BUNZO هو وجهتك الأولى لألذ وأشهى وجبات البرجر الطازجة المصنوعة من أجود أنواع اللحوم المحلية يومياً. نحن نؤمن بأن الطعام الجيد يصنع ابتسامة، ونسعى دائمًا لتقديم تجربة طعام فريدة لا تُنسى لكل عملائنا.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Start Contact Section (تواصل معنا) -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">تواصل معنا</h2>
+      <div class="contact-info">
+        <p>📍 العنوان: شارع الرئيسي، بالقرب من ميدان الشهداء</p>
+        <p>📞 الخط الساخن: 19999</p>
+        <p>⏰ ساعات العمل: يومياً من الساعة 12 ظهراً حتى 3 صباحاً</p>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+<!-- Start Cart Modal (نافذة السلة وإتمام الطلب) -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>سلة المشتريات وإتمام الطلب</h3>
+        <button class="close-cart" id="closeCart">&times;</button>
+      </div>
+      <div class="cart-body">
+        <!-- محتوى السلة -->
+        <div class="cart-items-container">
+          <p class="empty-cart-msg">السلة فارغة حالياً</p>
+        </div>
+
+        <!-- فورم إتمام الطلب (Checkout Form) - مخفي لحين الضغط على إتمام الطلب -->
+        <form class="checkout-form" id="checkoutForm" style="display: none;">
+          <h4>بيانات التوصيل</h4>
+          <input type="text" placeholder="الاسم الكامل" required class="checkout-input">
+          <input type="tel" placeholder="رقم الهاتف" required class="checkout-input">
+          <textarea placeholder="عنوان التوصيل بالتفصيل (المدينة، الشارع، رقم الحي)" required class="checkout-input"></textarea>
+          <button type="submit" class="submit-order-btn">تأكيد الطلب</button>
+        </form>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>الإجمالي:</span>
+          <span class="total-price">0 ج.م</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">إتمام الطلب</button>
+      </div>
+    </div>
+  </div>
+  <!-- End Cart Modal -->
+   <!-- Start Chatbot Widget -->
+  <div class="chatbot-container">
+    <!-- زر فتح الشات بوت العائم -->
+    <button class="chatbot-toggler" id="chatbotToggler">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+
+    <!-- نافذة المحادثة -->
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <h3>مساعد BUNZO الآلي 🤖</h3>
+        <button class="close-chatbot" id="closeChatbot">&times;</button>
+      </div>
+      
+      <div class="chatbot-body" id="chatbotBody">
+        <!-- رسالة البداية التلقائية -->
+        <div class="bot-message">
+          👋 أهلاً بيك في مطعم BUNZO!<br><br>
+          أقدر أساعدك في:<br>
+          🍔 مشاهدة المنيو<br>
+          🛒 طلب أوردر<br>
+          📍 معرفة موقعنا<br>
+          🕒 مواعيد العمل<br>
+          🎉 معرفة العروض<br><br>
+          اسألني أي سؤال، زي: "إيه أحسن وجبة؟" أو "عندكم توصيل؟"
+        </div>
+      </div>
+
+      <div class="chatbot-footer">
+        <input type="text" id="userInput" placeholder="اكتب سؤالك هنا..." />
+        <button id="sendBtn">إرسال</button>
+      </div>
+    </div>
+  </div>
+  <!-- End Chatbot Widget -->
+   <!-- Modal تسجيل الدخول / إنشاء حساب -->
+  <div class="auth-modal" id="authModal" style="display: none;">
+    <div class="auth-content">
+      <button class="close-auth" id="closeAuth">&times;</button>
+      
+      <!-- نموذج اختيار طريقة الدخول أو التسجيل -->
+      <div id="authMainView">
+        <h2>مرحباً بك في BUNZO 🍔</h2>
+        <p>سجل دخولك أو أنشئ حساباً جديداً لمتابعة طلباتك</p>
+
+        <!-- أزرار Social Login -->
+        <div class="social-login">
+          <button class="social-btn google-btn" id="googleLoginBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.8 14.8 1 12 1 7.4 1 3.5 3.6 1.6 7.4l3.7 2.9C6.2 7.1 8.9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.3 14.7c-.2-.7-.4-1.5-.4-2.7s.2-2 .4-2.7L1.6 6.4C.6 8.4 0 10.7 0 13s.6 4.6 1.6 6.6l3.7-2.9z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3.1 0-5.8-2.1-6.7-5.3L1.6 15.6C3.5 19.4 7.4 22 12 22z"/></svg>
+            التسجيل باستخدام جوجل
+          </button>
+          
+          <button class="social-btn facebook-btn" id="fbLoginBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            التسجيل باستخدام فيسبوك
+          </button>
+        </div>
+
+        <div class="auth-divider"><span>أو بالبريد الإلكتروني</span></div>
+
+        <!-- تبديل بين تسجيل الدخول وإنشاء حساب -->
+        <div class="auth-tabs">
+          <button class="tab-btn active" id="toLoginTab">تسجيل دخول</button>
+          <button class="tab-btn" id="toRegisterTab">إنشاء حساب جديد</button>
+        </div>
+
+        <!-- فورم تسجيل الدخول اليدوي -->
+        <form id="manualLoginForm" class="auth-form">
+          <input type="email" placeholder="البريد الإلكتروني أو رقم الهاتف" required>
+          <input type="password" placeholder="كلمة المرور" required>
+          <button type="submit" class="auth-submit-btn">دخول</button>
+        </form>
+
+        <!-- فورم إنشاء حساب جديد (بالبريد ورقم الهاتف) -->
+        <form id="manualRegisterForm" class="auth-form" style="display: none;">
+          <input type="text" placeholder="الاسم الكامل" required>
+          <input type="email" placeholder="البريد الإلكتروني" required>
+          <input type="tel" placeholder="رقم الهاتف (مثال: 01012345678)" required>
+          <input type="password" placeholder="كلمة المرور الجديدة" required>
+          <button type="submit" class="auth-submit-btn">إنشاء الحساب وإرسال كود التحقق</button>
+        </form>
+      </div>
+
+      <!-- نافذة إدخال كود التحقق (واتساب / SMS) -->
+      <div id="otpVerificationView" style="display: none; text-align: center;">
+        <h3>🔐 التحقق برقم الهاتف</h3>
+        <p>تم إرسال كود التحقق (OTP) في رسالة واتساب / SMS إلى رقمك:</p>
+        <span id="userPhoneNumberDisplay" style="color: #e67e22; font-weight: bold; display: block; margin: 10px 0;"></span>
+        
+        <div class="otp-inputs" style="margin: 20px 0;">
+          <input type="text" id="otpCodeInput" placeholder="اكتب الكود المكون من 4 أرقام (مثلاً: 1234)" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; width: 200px; padding: 10px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 8px;">
+        </div>
+
+        <button id="verifyOtpBtn" class="auth-submit-btn">تأكيد الكود ودخول</button>
+        <p style="font-size: 12px; color: #888; margin-top: 15px;">محاكاة تجريبية: الكود الافتراضي هو <b>1234</b></p>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

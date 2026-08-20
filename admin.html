@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم مطعم - Dashboard UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+    body { background-color: #0f172a; color: #f8fafc; display: flex; height: 100vh; overflow: hidden; }
+
+    /* القائمة الجانبية */
+    .sidebar { width: 260px; background-color: #1e293b; border-left: 1px solid #334155; display: flex; flex-direction: column; padding: 20px; }
+    .sidebar h2 { color: #f97316; font-size: 20px; margin-bottom: 30px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .menu { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .menu li a { color: #94a3b8; text-decoration: none; padding: 12px 15px; border-radius: 8px; display: flex; align-items: center; gap: 12px; transition: 0.3s; font-weight: 600; }
+    .menu li.active a, .menu li a:hover { background-color: #f97316; color: #fff; }
+
+    /* المحتوى الرئيسي */
+    .main-content { flex: 1; padding: 30px; overflow-y: auto; }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid #334155; padding-bottom: 15px; }
+    .header h1 { font-size: 22px; color: #f8fafc; }
+
+    /* كروت الإحصائيات */
+    .stats-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 30px; }
+    .stat-box { background-color: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; }
+    .stat-box h3 { font-size: 14px; color: #94a3b8; margin-bottom: 8px; }
+    .stat-box .val { font-size: 22px; font-weight: bold; color: #f97316; }
+
+    /* قسم إدارة الأكلات والمنيو */
+    .section-card { background-color: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; margin-bottom: 30px; }
+    .section-card h3 { margin-bottom: 20px; font-size: 18px; display: flex; justify-content: space-between; align-items: center; }
+    
+    /* نموذج الإضافة */
+    .add-form { display: flex; gap: 15px; margin-bottom: 20px; background: #0f172a; padding: 15px; border-radius: 8px; }
+    .add-form input { flex: 1; padding: 10px; background: #1e293b; border: 1px solid #334155; color: #fff; border-radius: 6px; outline: none; }
+    .add-form button { background: #f97316; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+    .add-form button:hover { background: #ea580c; }
+
+    /* الجدول */
+    table { width: 100%; border-collapse: collapse; text-align: right; }
+    th, td { padding: 12px; border-bottom: 1px solid #334155; font-size: 14px; }
+    th { color: #94a3b8; font-weight: 600; }
+    .del-btn { background-color: #ef4444; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; transition: 0.3s; }
+    .del-btn:hover { background-color: #dc2626; }
+  </style>
+</head>
+<body>
+
+  <!-- القائمة الجانبية للوحة التحكم -->
+  <div class="sidebar">
+    <h2><i class="fa-solid fa-utensils"></i> Resto Dashboard</h2>
+    <ul class="menu">
+      <li class="active"><a href="#"><i class="fa-solid fa-chart-pie"></i> لوحة القيادة</a></li>
+      <li><a href="#"><i class="fa-solid fa-burger"></i> إدارة الأكلات والمنيو</a></li>
+      <li><a href="#"><i class="fa-solid fa-bag-shopping"></i> الطلبات الحية</a></li>
+      <li><a href="index.html" style="color: #ef4444; margin-top: 40px;"><i class="fa-solid fa-arrow-right-from-bracket"></i> العودة للموقع</a></li>
+    </ul>
+  </div>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="main-content">
+    <div class="header">
+      <h1>إدارة المنيو والأكلات (Dashboard UI)</h1>
+      <span style="color: #94a3b8; font-size: 14px;"><i class="fa-regular fa-calendar"></i> اليوم</span>
+    </div>
+
+    <!-- الإحصائيات السريعة -->
+    <div class="stats-container">
+      <div class="stat-box">
+        <h3>إجمالي الأكلات بالمنيو</h3>
+        <div class="val" id="totalItemsCount">3</div>
+      </div>
+      <div class="stat-box">
+        <h3>الطلبات الجديدة</h3>
+        <div class="val">8 أوردرات</div>
+      </div>
+      <div class="stat-box">
+        <h3>أرباح اليوم</h3>
+        <div class="val">2,150 ج.م</div>
+      </div>
+    </div>
+
+    <!-- قسم إضافة وحذف الأكلات -->
+    <div class="section-card">
+      <h3>
+        <span>إدارة وجبات المطعم</span>
+      </h3>
+      
+      <!-- نموذج إضافة أكلة جديدة -->
+      <div class="add-form">
+        <input type="text" id="mealName" placeholder="اسم الوجبة (مثال: تشيز برجر دابل)">
+        <input type="text" id="mealPrice" placeholder="السعر (مثال: 150 ج.م)">
+        <button onclick="addMeal()">إضافة للسيستم <i class="fa-solid fa-plus"></i></button>
+      </div>
+
+      <!-- جدول عرض الأكلات -->
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>اسم الوجبة</th>
+            <th>السعر</th>
+            <th>الحالة</th>
+            <th>الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody id="mealsTableBody">
+          <tr>
+            <td>1</td>
+            <td>بيج بونز برجر</td>
+            <td>180 ج.م</td>
+            <td><span style="color: #22c55e;">متاح</span></td>
+            <td><button class="del-btn" onclick="deleteMeal(this)">حذف</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>ماشروم سويس برجر</td>
+            <td>210 ج.م</td>
+            <td><span style="color: #22c55e;">متاح</span></td>
+            <td><button class="del-btn" onclick="deleteMeal(this)">حذف</button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>تشكن كريمبي صب</td>
+            <td>140 ج.م</td>
+            <td><span style="color: #22c55e;">متاح</span></td>
+            <td><button class="del-btn" onclick="deleteMeal(this)">حذف</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // دالة لإضافة أكلة جديدة للجدول وتحديث العدد
+    function addMeal() {
+      const nameInput = document.getElementById('mealName');
+      const priceInput = document.getElementById('mealPrice');
+      const tableBody = document.getElementById('mealsTableBody');
+
+      if(nameInput.value.trim() === '' || priceInput.value.trim() === '') {
+        alert('من فضلك ادخل اسم الوجبة والسعر!');
+        return;
+      }
+
+      const rowsCount = tableBody.rows.length + 1;
+
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td>${rowsCount}</td>
+        <td>${nameInput.value}</td>
+        <td>${priceInput.value}</td>
+        <td><span style="color: #22c55e;">متاح</span></td>
+        <td><button class="del-btn" onclick="deleteMeal(this)">حذف</button></td>
+      `;
+
+      tableBody.appendChild(newRow);
+      updateCount();
+
+      // تفريغ الحقول
+      nameInput.value = '';
+      priceInput.value = '';
+    }
+
+    // دالة لحذف الأكلة من المنيو
+    function deleteMeal(btn) {
+      const row = btn.closest('tr');
+      row.remove();
+      updateCount();
+    }
+
+    // تحديث عداد الأكلات تلقائياً
+    function updateCount() {
+      const tableBody = document.getElementById('mealsTableBody');
+      document.getElementById('totalItemsCount').innerText = tableBody.rows.length;
+    }
+  </script>
+
+</body>
+</html>
